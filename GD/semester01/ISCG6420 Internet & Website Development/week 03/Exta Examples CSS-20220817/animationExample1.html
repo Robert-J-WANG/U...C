@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Animations Example</title>
+<style type = "text/css">
+
+a.smooth {
+	/* this part, setting up a initial style */
+	display: block;
+	margin-top: 50px;
+	margin-left: 50px;
+	text-decoration:none;
+	text-align: center;
+	padding: 1em 2em;
+	width: 10em;
+	border-radius: 1.5em;
+	color: #fff;
+	background-color: mediumblue;
+	
+
+}
+
+@keyframes colors {
+	0% { background-color: red; }
+	20% { background-color: orange; }
+	40% { background-color: yellow; }
+	60% { background-color: green; }
+	80% { background-color: blue; }
+	100% { background-color: purple; }
+}
+
+@-moz-keyframes colors {
+	0% { background-color: red; }
+	20% { background-color: orange; }
+	40% { background-color: yellow; }
+	60% { background-color: green; }
+	80% { background-color: blue; }
+	100% { background-color: purple; }
+}
+@-webkit-keyframes colors {
+	0% { background-color: red; }
+	20% { background-color: orange; }
+	40% { background-color: yellow; }
+	60% { background-color: green; }
+	80% { background-color: blue; }
+	100% { background-color: purple; }
+}
+
+
+a.smooth:hover, a.smooth:focus {
+		animation-name: colors;
+	animation-duration: 5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	
+	-webkit-animation-duration: 5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	
+	-moz-animation-duration: 5s;
+	-moz-animation-timing-function: linear;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: alternate;
+	
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="" class="smooth">awesomesauce</a>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Transitions Example</title>
+<style type = "text/css">
+
+a.smooth {
+	/* this part, setting up a initial style */
+	display: block;
+	margin-top: 50px;
+	margin-left: 50px;
+	text-decoration:none;
+	text-align: center;
+	padding: 0.75em 2em;
+	width: 10em;
+	height: 3em;
+	border-radius: 1.5em;
+	color: #fff;
+	background-color: mediumblue;
+	
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	
+	/* this part, setting up a transition */
+	/* to make sure that css 3 works correctly all browsers, we may add moz, webkit in front of our css property    */
+	/* a browser will select the css 3 property that are compatible with it automatically ,i.e, firefox select moz css property   */
+	
+	transition-property: all;
+	transition-duration: 2s;
+	transition-timing-function: ease-in-out;
+	transition-delay: 0.2s;
+	
+	/* for Internet Explorer */
+	-ms-transition-property: all;
+	-ms-transition-duration: 2s;
+	-ms-transition-timing-function: ease-in-out;
+	-ms-transition-delay: 0.2s;
+	/* for firefox */
+	-moz-transition-property: all;
+	-moz-transition-duration: 2s;
+	-moz-transition-timing-function: ease-in-out;
+	-moz-transition-delay: 0.2s;
+	/* for chrome safari  */
+	-webkit-transition-property: all;
+	-webkit-transition-duration: 2s;
+	-webkit-transition-timing-function: ease-in-out;
+	-webkit-transition-delay: 0.2s;
+}
+
+/* this part, we change css property when mouse hovers and focuses on a link */
+	a.smooth:hover, a.smooth:focus {
+		background-color: red; 
+		height: 15em;
+		width: 30em;
+		padding-top: 7em;
+
+	}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="" class="smooth">awesomesauce</a>
+
+</body>
+</html>

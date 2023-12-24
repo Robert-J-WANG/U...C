@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Event Registration</title>
+<script type="text/javascript">
+
+
+
+//add or remove Border function
+function addParagraph() {
+	//get the body node
+	//first, it will come as a list of body elements
+	//However, we has only one body element in a list 
+	var bodyElement = document.getElementsByTagName('body')[0];
+	//get the input node
+	var InputElement = document.getElementsByTagName('input')[0];
+	//create P element
+	var new_paragraph = document.createElement('p');
+	//create a text node for p element
+	var new_textnode = document.createTextNode("Hi there and greetings!"); 
+	//append to paragraph and body
+	new_paragraph.appendChild(new_textnode);
+	bodyElement.insertBefore(new_paragraph, InputElement);
+	
+	
+	
+}
+
+
+</script> 
+</head>
+<body>
+
+
+
+<!-- we register on click event to this button-->
+<input  type="button" value="toggle background and border" onclick = "addParagraph();" />
+
+</body>
+</html>

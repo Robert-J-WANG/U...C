@@ -1,0 +1,231 @@
+<Tere_Boat> 
+    <rowA> 
+    <seatA2 status = "empty" > A2 </seatA2>
+    <seatA3 status = "empty"> A3 </seatA3>
+    <seatA4 status = "empty"> A4 </seatA4>
+    <seatA5 status = "empty"> A5 </seatA5>
+    <seatA6 status = "empty"> A6 </seatA6>
+    <seatA7 status = "empty"> A7 </seatA7>
+    </rowA> 
+     
+    <rowB> 
+    <seatB2 status = "empty"> B2 </seatB2>
+    <seatB3 status = "empty"> B3 </seatB3>
+    <seatB4 status = "empty"> B4 </seatB4>
+    <seatB5 status = "empty"> B5 </seatB5>
+    <seatB6 status = "empty"> B6 </seatB6>
+    <seatB7 status = "empty"> B7 </seatB7>
+    </rowB> 
+
+    <rowC> 
+    <seatC1 status = "empty"> C1 </seatC1>
+    <seatC2 status = "empty"> C2 </seatC2>
+    <seatC3 status = "empty"> C3 </seatC3>
+    <seatC4 status = "empty"> C4 </seatC4>
+    <seatC5 status = "empty"> C5 </seatC5>
+    <seatC6 status = "empty"> C6 </seatC6>
+    <seatC7 status = "empty"> C7 </seatC7>
+    <seatC8 status = "empty"> C8 </seatC8>
+    </rowC> 
+
+    <rowD> 
+    <seatD1 status = "empty"> D1 </seatD1>
+    <seatD2 status = "empty"> D2 </seatD2>
+    <seatD3 status = "empty"> D3 </seatD3>
+    <seatD4 status = "empty"> D4 </seatD4>
+    <seatD5 status = "empty"> D5 </seatD5>
+    <seatD6 status = "empty"> D6 </seatD6>
+    <seatD7 status = "empty"> D7 </seatD7>
+    <seatD8 status = "empty"> D8 </seatD8>
+    </rowD> 
+
+    <rowE> 
+    <seatE1 status = "empty"> E1 </seatE1>
+    <seatE2 status = "empty"> E2 </seatE2>
+    <seatE3 status = "empty"> E3 </seatE3>
+    <seatE4 status = "empty"> E4 </seatE4>
+    <seatE5 status = "empty"> E5 </seatE5>
+    <seatE6 status = "empty"> E6 </seatE6>
+    <seatE7 status = "empty"> E7 </seatE7>
+    <seatE8 status = "empty"> E8 </seatE8>
+    </rowE> 
+
+    <rowF> 
+    <seatF1 status = "empty"> F1 </seatF1>
+    <seatF2 status = "empty"> F2 </seatF2>
+    <seatF3 status = "empty"> F3 </seatF3>
+    <seatF4 status = "empty"> F4 </seatF4>
+    <seatF5 status = "empty"> F5 </seatF5>
+    <seatF6 status = "empty"> F6 </seatF6>
+    <seatF7 status = "empty"> F7 </seatF7>
+    <seatF8 status = "empty"> F8 </seatF8>
+    </rowF> 
+
+    <rowG> 
+    <seatG1 status = "empty"> G1 </seatG1>
+    <seatG2 status = "empty"> G2 </seatG2>
+    <seatG3 status = "empty"> G3 </seatG3>
+    <seatG4 status = "empty"> G4 </seatG4>
+    <seatG5 status = "empty"> G5 </seatG5>
+    <seatG6 status = "empty"> G6 </seatG6>
+    <seatG7 status = "empty"> G7 </seatG7>
+    <seatG8 status = "empty"> G8 </seatG8>
+    </rowG> 
+
+    <rowH> 
+    <seatH1 status = "empty"> H1 </seatH1>
+    <seatH2 status = "empty"> H2 </seatH2>
+    <seatH3 status = "empty"> H3 </seatH3>
+    <seatH4 status = "empty"> H4 </seatH4>
+    <seatH5 status = "empty"> H5 </seatH5>
+    <seatH6 status = "empty"> H6 </seatH6>
+    <seatH7 status = "empty"> H7 </seatH7>
+    <seatH8 status = "empty"> H8 </seatH8>
+    </rowH>
+
+ 
+    <rowI> 
+    <seatI2 status = "empty"> I2 </seatI2>
+    <seatI3 status = "empty"> I3 </seatI3>
+    <seatI4 status = "empty"> I4 </seatI4>
+    <seatI5 status = "empty"> I5 </seatI5>
+    <seatI6 status = "empty"> I6 </seatI6>
+    <seatI7 status = "empty"> I7 </seatI7>
+    </rowI> 
+</Tere_Boat >
+ 
+
+ <Nui_Boat>
+    <rowA> 
+    <seatA3 status = "empty"> A3 </seatA3>
+    <seatA4 status = "empty"> A4 </seatA4>
+    <seatA5 status = "empty"> A5 </seatA5>
+    <seatA6 status = "empty"> A6 </seatA6>
+    </rowA> 
+     
+    <rowB> 
+    <seatB3 status = "empty"> B3 </seatB3>
+    <seatB4 status = "empty"> B4 </seatB4>
+    <seatB5 status = "empty"> B5 </seatB5>
+    <seatB6 status = "empty"> B6 </seatB6>
+    </rowB> 
+
+    <rowC> 
+    <seatC2 status = "empty"> C2 </seatC2>
+    <seatC3 status = "empty"> C3 </seatC3>
+    <seatC4 status = "empty"> C4 </seatC4>
+    <seatC5 status = "empty"> C5 </seatC5>
+    <seatC6 status = "empty"> C6 </seatC6>
+    <seatC7 status = "empty"> C7 </seatC7>
+    </rowC> 
+
+    <rowD> 
+    <seatD1 status = "empty"> D1 </seatD1>
+    <seatD2 status = "empty"> D2 </seatD2>
+    <seatD3 status = "empty"> D3 </seatD3>
+    <seatD4 status = "empty"> D4 </seatD4>
+    <seatD5 status = "empty"> D5 </seatD5>
+    <seatD6 status = "empty"> D6 </seatD6>
+    <seatD7 status = "empty"> D7 </seatD7>
+    <seatD8 status = "empty"> D8 </seatD8>
+    </rowD> 
+
+    <rowE> 
+    <seatE1 status = "empty"> E1 </seatE1>
+    <seatE2 status = "empty"> E2 </seatE2>
+    <seatE3 status = "empty"> E3 </seatE3>
+    <seatE4 status = "empty"> E4 </seatE4>
+    <seatE5 status = "empty"> E5 </seatE5>
+    <seatE6 status = "empty"> E6 </seatE6>
+    <seatE7 status = "empty"> E7 </seatE7>
+    <seatE8 status = "empty"> E8 </seatE8>
+    </rowE> 
+
+    <rowF> 
+    <seatF1 status = "empty"> F1 </seatF1>
+    <seatF2 status = "empty"> F2 </seatF2>
+    <seatF3 status = "empty"> F3 </seatF3>
+    <seatF4 status = "empty"> F4 </seatF4>
+    <seatF5 status = "empty"> F5 </seatF5>
+    <seatF6 status = "empty"> F6 </seatF6>
+    <seatF7 status = "empty"> F7 </seatF7>
+    <seatF8 status = "empty"> F8 </seatF8>
+    </rowF> 
+
+    <rowG> 
+    <seatG1 status = "empty"> G1 </seatG1>
+    <seatG2 status = "empty"> G2 </seatG2>
+    <seatG3 status = "empty"> G3 </seatG3>
+    <seatG4 status = "empty"> G4 </seatG4>
+    <seatG5 status = "empty"> G5 </seatG5>
+    <seatG6 status = "empty"> G6 </seatG6>
+    <seatG7 status = "empty"> G7 </seatG7>
+    <seatG8 status = "empty"> G8 </seatG8>
+    </rowG> 
+
+    <rowH> 
+    <seatH1 status = "empty"> H1 </seatH1>
+    <seatH2 status = "empty"> H2 </seatH2>
+    <seatH3 status = "empty"> H3 </seatH3>
+    <seatH4 status = "empty"> H4 </seatH4>
+    <seatH5 status = "empty"> H5 </seatH5>
+    <seatH6 status = "empty"> H6 </seatH6>
+    <seatH7 status = "empty"> H7 </seatH7>
+    <seatH8 status = "empty"> H8 </seatH8>
+    </rowH>
+
+ 
+    <rowI> 
+    <seatI1 status = "empty"> I1 </seatI1>
+    <seatI2 status = "empty"> I2 </seatI2>
+    <seatI3 status = "empty"> I3 </seatI3>
+    <seatI4 status = "empty"> I4 </seatI4>
+    <seatI5 status = "empty"> I5 </seatI5>
+    <seatI6 status = "empty"> I6 </seatI6>
+    <seatI7 status = "empty"> I7 </seatI7>
+    <seatI8 status = "empty"> I8 </seatI8>
+    </rowI> 
+
+    <rowJ> 
+    <seatJ1 status = "empty"> J1 </seatJ1>
+    <seatJ2 status = "empty"> J2 </seatJ2>
+    <seatJ3 status = "empty"> J3 </seatJ3>
+    <seatJ4 status = "empty"> J4 </seatJ4>
+    <seatJ5 status = "empty"> J5 </seatJ5>
+    <seatJ6 status = "empty"> J6 </seatJ6>
+    <seatJ7 status = "empty"> J7 </seatJ7>
+    <seatJ8 status = "empty"> J8 </seatJ8>
+    </rowJ> 
+
+    <rowK> 
+    <seatK1 status = "empty"> K1 </seatK1>
+    <seatK2 status = "empty"> K2 </seatK2>
+    <seatK3 status = "empty"> K3 </seatK3>
+    <seatK4 status = "empty"> K4 </seatK4>
+    <seatK5 status = "empty"> K5 </seatK5>
+    <seatK6 status = "empty"> K6 </seatK6>
+    <seatK7 status = "empty"> K7 </seatK7>
+    <seatK8 status = "empty"> K8 </seatK8>
+    </rowK> 
+
+    <rowL> 
+    <seatL2 status = "empty"> L2 </seatL2>
+    <seatL3 status = "empty"> L3 </seatL3>
+    <seatL4 status = "empty"> L4 </seatL4>
+    <seatL5 status = "empty"> L5 </seatL5>
+    <seatL6 status = "empty"> L6 </seatL6>
+    <seatL7 status = "empty"> L7 </seatL7>
+    </rowL> 
+
+    <rowM> 
+    <seatM2 status = "empty"> M2 </seatM2>
+    <seatM3 status = "empty"> M3 </seatM3>
+    <seatM4 status = "empty"> M4 </seatM4>
+    <seatM5 status = "empty"> M5 </seatM5>
+    <seatM6 status = "empty"> M6 </seatM6>
+    <seatM7 status = "empty"> M7 </seatM7>
+    </rowM> 
+
+
+
+ </Nui_Boat>

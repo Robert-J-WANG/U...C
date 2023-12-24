@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Animations Example</title>
+<style type = "text/css">
+
+a.smooth {
+	/* this part, setting up a initial style */
+	display: block;
+	margin-top: 50px;
+	margin-left: 50px;
+	position: relative;
+	text-decoration:none;
+	text-align: center;
+	padding: 1em 2em;
+	width: 10em;
+	border-radius: 1.5em;
+	color: #fff;
+	background-color: mediumblue;
+	
+
+}
+
+@-webkit-keyframes colors {
+	0% { background-color: red; left:0px; top:0px; transform: rotate(0deg); }
+	20% { background-color: orange; left:100px; top:0px; transform: rotate(72deg);}
+	40% { background-color: yellow; left:200px; top:0px; transform: rotate(144deg);}
+	60% { background-color: green; left:200px; top:200px;transform: rotate(216deg); }
+	80% { background-color: blue; left:0px; top:100px;transform: rotate(288deg);}
+	100% { background-color: purple; left:0px; top:0px;transform: rotate(360deg); }
+}
+
+@-moz-keyframes colors {
+	0% { background-color: red; left:0px; top:0px; transform: rotate(0deg); }
+	20% { background-color: orange; left:100px; top:0px; transform: rotate(72deg);}
+	40% { background-color: yellow; left:200px; top:0px; transform: rotate(144deg);}
+	60% { background-color: green; left:200px; top:200px;transform: rotate(216deg); }
+	80% { background-color: blue; left:0px; top:100px;transform: rotate(288deg);}
+	100% { background-color: purple; left:0px; top:0px;transform: rotate(360deg); }
+}
+
+
+
+@keyframes colors {
+	0% { background-color: red; left:0px; top:0px; transform: rotate(0deg); }
+	20% { background-color: orange; left:100px; top:0px; transform: rotate(72deg);}
+	40% { background-color: yellow; left:200px; top:0px; transform: rotate(144deg);}
+	60% { background-color: green; left:200px; top:200px;transform: rotate(216deg); }
+	80% { background-color: blue; left:0px; top:100px;transform: rotate(288deg);}
+	100% { background-color: purple; left:0px; top:0px;transform: rotate(360deg); }
+}
+
+
+a.smooth:hover, a.smooth:focus {
+		animation-name: colors;
+		animation-duration: 4s;
+		animation-timing-function: linear;
+		 animation-direction: alternate;
+		 animation-delay: 1s;
+		 
+		 -webkit-animation-name: colors;
+		-webkit-animation-duration: 4s;
+		-webkit-animation-timing-function: linear;
+		 -webkit-animation-direction: alternate;
+		 -webkit-animation-delay: 1s;
+		 
+		 -moz-animation-name: colors;
+		-moz-animation-duration: 4s;
+		-moz-animation-timing-function: linear;
+		 -moz-animation-direction: alternate;
+		-moz-animation-delay: 1s;
+	
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="" class="smooth">awesomesauce</a>
+
+</body>
+</html>

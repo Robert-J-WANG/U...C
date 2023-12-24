@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Event Registration</title>
+<script type="text/javascript">
+
+
+
+//this function toggles a text hiding
+function hideText() {
+	
+	//get span node with id "myText"
+	var SpanElement = document.getElementById('myText');
+	
+	//check whether texts are hidden 
+	if(SpanElement.style.display == "none") 
+	{
+		//if yes, then display them
+		SpanElement.style.display = "inline";
+	}
+	else
+	{
+		//if no, then hide them
+		SpanElement.style.display = "none";
+	
+	}
+	
+	
+}
+//this function highlights text
+function highlightText() {
+	
+	//get span node with id "myText"
+	var SpanElement = document.getElementById('myText');
+	
+	//In this part, we change style of our text
+	SpanElement.style.color = "red";
+	SpanElement.style.fontSize = "large"
+	SpanElement.style.fontWeight = "bold"
+	
+	
+	
+}
+
+
+</script> 
+</head>
+<body onload = "highlightText();">
+
+<p>
+ orem ipsum dolor sit amet, consectetur adipiscing elit. <span id = "myText">Phasellus laoreet pretium urna, ac consectetur leo.</span>
+ Ut placerat mauris sollicitudin, facilisis arcu at, accumsan orci. In eget dapibus erat. Aenean ac eros a purus sodales tempor. 
+ Integer sagittis vestibulum risus congue placerat. Vivamus vitae nisi a quam dictum commodo at sit amet mi. 
+ Fusce lobortis, mauris a aliquet accumsan, justo tortor maximus erat, sed cursus velit mauris rhoncus nibh. 
+ Nulla suscipit luctus magna, et tincidunt eros pellentesque sit amet. Aliquam erat volutpat. 
+ Nulla molestie tortor eget neque scelerisque fermentum.
+
+
+</p>
+
+<!-- we register on click event to this button-->
+<input  type="button" value="toggle background and border" onclick = "hideText();" />
+
+</body>
+</html>
