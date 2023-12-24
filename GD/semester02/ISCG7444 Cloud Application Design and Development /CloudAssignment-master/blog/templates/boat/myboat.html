@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}
+    My Boat
+{% endblock %}
+{% block content %}
+    <h1>My Boat</h1>
+    <a href="{% url 'add-boat' %}" class="btn btn-primary">Add new Boat</a><br><br>
+    {% for boat in object_list %}
+        {% if boat.owner.id == user.id %}
+            <div class="card">
+                <div class="card-body">
+                    <h3><a href="{% url 'boat-detail' boat.pk %}">{{ boat.name }}</a></h3>
+                    <p>
+                        Year built: {{ boat.built }}<br>
+                        Length: {{ boat.length }}<br>
+                        Price: {{ boat.price }}
+                    </p>
+                </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

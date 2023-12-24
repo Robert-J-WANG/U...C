@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    Rent My Boat
+{% endblock %}
+{% block content %}
+    <h1>{{ boat.name }}</h1>
+    <p>
+        Owner: {{ boat.owner }}<br>
+        Description: {{ boat.description }}<br>
+        Year built: {{ boat.built }}<br>
+        Length: {{ boat.length }}<br>
+        Price: ${{ boat.price }} per day
+    </p>
+    <a href="{% url 'update-boat' boat.pk %}" class="btn btn-secondary">Update</a>
+    <a href="{% url 'delete-boat' boat.pk %}" class="btn btn-danger">Delete</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+    Delete Boat
+{% endblock %}
+{% block content %}
+    <h1>Delete Boat</h1>
+    <h4>{{ boat.name }}</h4>
+    <div class="form-group">
+        <form method="post">
+            {% csrf_token %}
+            <strong>Are you sure to delete this boat?</strong>
+            <button class="btn btn-success">Delete</button>
+            <a href="{% url 'boat-detail' boat.pk %}" class="btn btn-dangerx">Cancel</a>
+        </form>
+    </div>
+{% endblock %}

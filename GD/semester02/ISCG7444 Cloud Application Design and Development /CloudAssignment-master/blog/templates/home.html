@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    Rent My Boat
+{% endblock %}
+{% block content %}
+    <h1>Rent My Boat</h1>
+    {% for boat in object_list %}
+        <div class="card">
+            <div class="card-body">
+                <h4><a href="{% url 'boat-detail' boat.pk %}">{{ boat.name }}</a> </h4>
+                <p>
+                    Year built: {{ boat.built }}<br>
+                    Length: {{ boat.length }}<br>
+                    Price: {{ boat.price }}
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
