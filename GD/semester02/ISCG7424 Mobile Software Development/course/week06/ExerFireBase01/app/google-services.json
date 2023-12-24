@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "488302822870",
+    "project_id": "exerfirebase01",
+    "storage_bucket": "exerfirebase01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488302822870:android:f0948b5cbb1c3571bdd077",
+        "android_client_info": {
+          "package_name": "com.example.exerfirebase01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488302822870-9gcj5sgcuucq17kefi3pcvt7ji2nob6n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfxmFB_fBFXfWv9vExX5mX48q1sSb2qgg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488302822870-9gcj5sgcuucq17kefi3pcvt7ji2nob6n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

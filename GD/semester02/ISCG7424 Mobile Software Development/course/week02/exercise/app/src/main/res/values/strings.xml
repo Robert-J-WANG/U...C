@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyApp2</string>
+    <string name="exercise_1">exercise 1</string>
+    <string name="exercise_2">exercise 2</string>
+    <string name="exercise_3">exercise 3</string>
+    <string name="exercise_4">exercise 4</string>
+    <string name="loginMainPage">User Login and Registration</string>
+    <string name="login_success">Login Successfully</string>
+    <string name="login_error">Login Error, Please Try It Again</string>
+    <string name="register_success">Register Successfully</string>
+    <string name="register_error">Personal information can not be null, Please try it again</string>
+
+
+</resources>

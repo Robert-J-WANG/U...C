@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/pg1"
+    tools:context=".Exercise2_Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/teal_800"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="@string/loginMainPage"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/ed_1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_border_title"
+        android:hint="User Name"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/ed_2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_border_title"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:paddingLeft="20dp"
+        android:textSize="30sp" />
+    
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_border_btn"
+        android:text="LOGIN"
+        android:textSize="30sp"
+        android:textColor="@color/purple_700"
+        />
+    <Button
+        android:id="@+id/btn_reg"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_border_btn"
+        android:text="REGISTER"
+        android:textSize="30sp"
+        android:textColor="@color/purple_700"
+        />
+    <Button
+        android:id="@+id/btn_cnl"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_border_btn"
+        android:text="CANCEL"
+        android:textSize="30sp"
+        android:textColor="@color/purple_700"
+        />
+
+</LinearLayout>
