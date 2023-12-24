@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}base{% endblock %}</title>
+
+    <!-- Bootstrap -->
+    <link href="{% static 'bootstrap-3.4.1-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    {% block css %}
+        <link href="{% static 'CSS/base.css' %}" rel="stylesheet"/>{% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="d-flex justify-content-center py-3">
+
+        <div class="navbar-header">
+            <a class="navbar-brand " href="#">Home Page</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="my-nav">
+            <ul class="nav navbar-nav navbar-right">
+                {% if user.is_authenticated %}
+                    <li><a href="#">You are online!</a></li>
+                    <li style="font-weight: bolder"><a href="{% url 'logout_user' %}">Logout</a></li>
+                {% else %}
+                    <li style="font-weight: bolder"><a href="{% url 'login_user' %}">Login</a></li>
+
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{% block content %}{% endblock %}
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'JS/jquery-3.5.1' %}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{% static 'bootstrap-3.4.1-dist/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

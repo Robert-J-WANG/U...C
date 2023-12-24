@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    List CollegeDay
+{% endblock title %}
+
+{% block content %}
+
+    <h2>CollegeDay List</h2>
+    <a class="btn btn-primary btn-lg" href="{% url 'college_day_create' %}" role="button">Create CollegeDay</a>
+    <a class="btn btn-warning btn-lg" href="{% url 'admin_home' %}" role="button">Return</a>
+    <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for college_day in object_list %}
+                <tr>
+                    <td>{{ college_day.date }}</td>
+                    <td>
+                        <a class="btn btn-success" href="{% url 'college_day_update' college_day.id %}" role="button">Update
+                        </a>
+                        <a class="btn btn-danger" href="{% url 'college_day_delete' college_day.id %}" role="button">Delete
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

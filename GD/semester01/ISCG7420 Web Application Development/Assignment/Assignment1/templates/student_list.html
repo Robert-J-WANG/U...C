@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Student List
+{% endblock title %}
+
+{% block content %}
+
+    <h2>Student List</h2>
+    <a class="btn btn-primary btn-lg" href="{% url 'student_create' %}" role="button">Create Student</a>
+    <a class="btn btn-warning btn-lg" href="{% url 'admin_home' %}" role="button">Return</a>
+
+
+    <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+            <thead>
+            <tr>
+                <th>Student_ID</th>
+                <th>Username</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>DOB</th>
+                <th>Email Address</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>{{ student.student_id }}</td>
+                    <td>{{ student.user.username }}</td>
+                    <td>{{ student.user.first_name }}</td>
+                    <td>{{ student.user.last_name }}</td>
+                    <td>{{ student.DOB }}</td>
+                    <td>{{ student.user.email }}</td>
+                    <td>
+                        <a class="btn btn-success" href="{% url 'student_update' student.id %}" role="button">Update
+                        </a>
+                        <a class="btn btn-danger" href="{% url 'student_delete' pk=student.id %}" role="button">Delete
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

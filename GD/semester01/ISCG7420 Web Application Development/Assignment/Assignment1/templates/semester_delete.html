@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}
+    Delete Semester
+{% endblock %}
+
+{% block content %}
+        <h2>Delete Semester</h2>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Delete" class="btn btn-danger btn-lg">
+            <span class="btn btn-warning btn-lg"><a href="{% url 'semester_list' %}">Cancel</a></span>
+        </form>
+    </div>
+{% endblock %}

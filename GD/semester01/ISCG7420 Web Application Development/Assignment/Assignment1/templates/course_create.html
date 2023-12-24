@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create Course
+{% endblock title %}
+
+{% block content %}
+    <h2>Create Course</h2>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="reset" class="btn btn-warning btn-lg">Reset</button>
+            <button type="submit" class="btn btn-primary btn-lg">Create</button>
+        </form>
+    </div>
+{% endblock %}
+
+

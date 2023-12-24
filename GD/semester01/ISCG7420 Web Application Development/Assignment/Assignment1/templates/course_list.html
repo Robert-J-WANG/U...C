@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    List Course
+{% endblock title %}
+
+{% block content %}
+
+    <h2>Course List</h2>
+    <a class="btn btn-primary btn-lg" href="{% url 'course_create' %}" role="button">Create Course</a>
+    <a class="btn btn-warning btn-lg" href="{% url 'admin_home' %}" role="button">Return</a>
+    <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+            <thead>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Semesters</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for course in object_list %}
+                <tr>
+                    <td>{{ course.code }}</td>
+                    <td>{{ course.name }}</td>
+                    <td>
+                        {% for semester in course.semesters.all %}
+                            {% if forloop.last %}
+                                {{ semester.year }}--{{ semester.semester }}
+                            {% else %}
+                                {{ semester.year }}--{{ semester.semester }}/
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+                    <td>
+                        <a class="btn btn-success" href="{% url 'course_update' course.id %}" role="button">Update
+                        </a>
+                        <a class="btn btn-danger" href="{% url 'course_delete' course.id %}" role="button">Delete
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

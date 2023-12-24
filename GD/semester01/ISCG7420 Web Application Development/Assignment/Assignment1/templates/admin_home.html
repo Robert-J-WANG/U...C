@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% load static %}
+include {% load static %}
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <nav class="col-sm-8 col-sm-offset-2 box_6" style="margin-bottom: 30px">
+        <div class="d-flex justify-content-center py-3">
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'admin_home' %}">Attendance System</a>
+            </div>
+
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'send_email' %}" role="button">Send Email
+                </a>
+            </div>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'upload_file' %}" role="button">Upload File
+                     </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-2 box_1" >
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Lecturer</h3>
+                    <p class="card-text">Create,update,delete a lecturer, or show the list of lecturers </p>
+                    <a href="{% url 'lecturer_list' %}" class="btn btn-primary btn-lg">More info</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 box_2">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Student</h3>
+                    <p class="card-text">Create,update,delete a Student, or show the list of Students </p>
+                    <a href="{% url 'student_list' %}" class="btn btn-primary btn-lg">More info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-2 box_3">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Class</h3>
+                    <p class="card-text">Create,update,delete a Class, or show the list of classes </p>
+                    <a href="{% url 'class_list' %}" class="btn btn-primary btn-lg">More info</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 box_4">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Semester</h3>
+                    <p class="card-text">Create,update,delete a semester, or show the list of semesters </p>
+                    <a href="{% url 'semester_list' %}" class="btn btn-primary btn-lg">More info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-2 box_5">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Course</h3>
+                    <p class="card-text">Create,update,delete a course, or show the list of courses </p>
+                    <a href="{% url 'course_list' %}" class="btn btn-primary btn-lg">More info</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 box_6">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">College Day</h3>
+                    <p class="card-text">Create,update,delete a College Day, or show the list of College
+                        Days </p>
+                    <a href="{% url 'college_day_list' %}" class="btn btn-primary btn-lg">More info</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

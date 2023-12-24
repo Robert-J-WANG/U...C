@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Update Semester
+{% endblock title %}
+
+{% block content %}
+<h1>Update Semester</h1>
+    <div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update" class="btn btn-success btn-lg">
+        <span class="btn btn-warning"><a href="{% url 'semester_list' %}">Cancel</a></span>
+    </form>
+    </div>
+{% endblock %}

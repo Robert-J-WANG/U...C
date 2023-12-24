@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Update Class
+{% endblock title %}
+
+{% block content %}
+<h2>Update Class</h2>
+    <div>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update" class="btn btn-success btn-lg">
+        <span class="btn btn-warning btn-lg"><a href="{% url 'class_list' %}">Cancel</a></span>
+    </form>
+    </div>
+{% endblock %}

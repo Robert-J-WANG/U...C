@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    List Lecturer
+{% endblock title %}
+
+{% block content %}
+
+    <h2>assign Lecturer to</h2>
+    <p>{{ class.course }} -- {{ class.number }}</p>
+
+    <form action="{% url 'assign' class.id %}" method="post">
+        {% csrf_token %}
+        <select name="lecturer">
+            {% for lec in lecturers %}
+
+                <option value={{ lec.id }}>
+                    {{ lec.user.first_name }}-{{ lec.user.last_name }}
+                </option>
+            {% endfor %}
+        </select>
+        <button>Assign</button>
+    </form>
+
+{% endblock %}
