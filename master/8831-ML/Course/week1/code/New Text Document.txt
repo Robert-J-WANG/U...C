@@ -1,0 +1,30 @@
+# Fit a polynomial of degree 2 to the dataset
+coefficients = np.polyfit(data_regression['Feature_1'], data_regression['Feature_2'], 2)
+
+# Create a range of values for feature_1 and feature_2
+feature_1_values = np.linspace(data_regression['Feature_1'].min(), data_regression['Feature_1'].max(), 100)
+feature_2_values = np.linspace(data_regression['Feature_2'].min(), data_regression['Feature_2'].max(), 100)
+feature_1_mesh, feature_2_mesh = np.meshgrid(feature_1_values, feature_2_values)
+
+# Compute the corresponding target values using the polynomial coefficients
+target_mesh = coefficients[0] * feature_1_mesh**2 + coefficients[1] * feature_1_mesh * feature_2_mesh + coefficients[2]
+
+# Plot the original data points
+plt.figure(figsize=(10, 8))
+ax = plt.axes(projection='3d')
+ax.scatter(data_regression['Feature_1'], data_regression['Feature_2'], data_regression['Target'], c='blue', marker='o', label='Data points')
+
+# Plot the best-fit plane
+ax.plot_surface(feature_1_mesh, feature_2_mesh, target_mesh, color='red', alpha=0.5, label='Best-fit plane')
+
+# Set labels and title
+ax.set_xlabel('Feature 1')
+ax.set_ylabel('Feature 2')
+ax.set_zlabel('Target')
+plt.title('Best-fit Plane for the Entire Dataset')
+
+# Add legend
+ax.legend()
+
+# Show plot
+plt.show()
