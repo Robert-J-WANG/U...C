@@ -15,7 +15,7 @@ Raspberry Pi connection
     2. 获取自己的raspberry Pi的ip地址：
 
         1. 下载Net Ananyzer App,
-        2. 扫描附近的设备可获得ip地址（127.10.10.4）
+        2. 扫描附近的设备可获得ip地址（127.20.10.4）
 
     3. 安装MQTT移动端app
 
@@ -46,7 +46,7 @@ Raspberry Pi connection
             1. 连接raspberry Pi
 
                 ```bash
-                shh comitup@127.10.10.4  # raspberry Pi ip address
+                shh comitup@127.20.10.4  # raspberry Pi ip address
                 ```
 
                 ```bash
