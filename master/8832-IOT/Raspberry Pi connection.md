@@ -1,4 +1,4 @@
-Raspberry Pi connection 
+### Part1: Raspberry Pi connection 
 
 1. 现有设备
 
@@ -190,6 +190,161 @@ Raspberry Pi connection
 6. Node-RED工具高级使用
 
     更新中...............
+    
+    
 
+### Part 2:  sensorTag + Raspberry PI + Node-red
+
+#### Raspberry Pi SensorTag 数据采集和存储
+
+本文档详细说明了在 Raspberry Pi 上安装必要的软件包，创建虚拟环境，扫描蓝牙设备，初始化 SQLite 数据库，以及编写和运行 Python 脚本以收集和存储 SensorTag 数据的完整步骤。
+
+1. 安装必要的软件包：
+    ```sh
+    sudo apt-get update
+    sudo apt-get install python3-pip python3-venv bluez sqlite3
+    ```
+
+2. 创建虚拟环境并安装 bluepy：
+    ```sh
+    python3 -m venv ~/sensor_env
+    source ~/sensor_env/bin/activate
+    pip install bluepy
+    ```
+
+3. 扫描蓝牙设备以获取 MAC 地址：
+    ```sh
+    sudo hciconfig hci0 up
+    sudo hcitool lescan
+    ```
+    记录你的 SensorTag 的 MAC 地址（例如：98:07:2D:31:49:83）。
+
+4. 创建并初始化 SQLite 数据库：
+    ```sh
+    sqlite3 sensordata.db
+    ```
+    创建 SensorData 表：
+    ```sql
+    DROP TABLE IF EXISTS SensorData;
+    CREATE TABLE SensorData (
+        id INTEGER PRIMARY KEY,
+        timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+        temperature REAL,
+        humidity REAL,
+        accel_x REAL,
+        accel_y REAL,
+        accel_z REAL,
+        gyro_x REAL,
+        gyro_y REAL,
+        gyro_z REAL,
+        mag_x REAL,
+        mag_y REAL,
+        mag_z REAL,
+        light REAL,
+        battery REAL
+    );
+    ```
+    退出 SQLite 命令行工具：
+    ```sh
+    .exit
+    ```
+
+5. 编写并运行 Python 脚本：
+    创建一个新的 Python 脚本文件，例如 `collect_data.py`，内容如下：
+    ```python
+    import sys
+    import sqlite3
+    from bluepy import sensortag
+    
+    def save_to_db(data):
+        # 连接到数据库并保存数据
+        conn = sqlite3.connect('sensordata.db')
+        c = conn.cursor()
+        c.execute("""INSERT INTO SensorData (
+                        temperature, humidity, accel_x, accel_y, accel_z, 
+                        gyro_x, gyro_y, gyro_z, mag_x, mag_y, mag_z, 
+                        light, battery) 
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                  (data['temperature'], data['humidity'], 
+                   data['accel'][0], data['accel'][1], data['accel'][2], 
+                   data['gyro'][0], data['gyro'][1], data['gyro'][2], 
+                   data['mag'][0], data['mag'][1], data['mag'][2], 
+                   data['light'], data['battery']))
+        conn.commit()
+        conn.close()
+    
+    def main(mac):
+        # 初始化传感器并启用所有可用传感器
+        tag = sensortag.SensorTag(mac)
+        tag.IRtemperature.enable()
+        tag.humidity.enable()
+        tag.accelerometer.enable()
+        tag.gyroscope.enable()
+        tag.magnetometer.enable()
+        tag.lightmeter.enable()
+        tag.battery.enable()
+        
+        try:
+            while True:
+                tag.waitForNotifications(1.0)
+                # 读取传感器数据
+                data = {
+                    'temperature': tag.IRtemperature.read()[0],
+                    'humidity': tag.humidity.read()[0],
+                    'accel': tag.accelerometer.read(),
+                    'gyro': tag.gyroscope.read(),
+                    'mag': tag.magnetometer.read(),
+                    'light': tag.lightmeter.read(),
+                    'battery': tag.battery.read()
+                }
+                # 打印读取的数据
+                print(f"Temperature: {data['temperature']} C")
+                print(f"Humidity: {data['humidity']} %")
+                print(f"Accelerometer: {data['accel']}")
+                print(f"Gyroscope: {data['gyro']}")
+                print(f"Magnetometer: {data['mag']}")
+                print(f"Light: {data['light']}")
+                print(f"Battery: {data['battery']}")
+                # 保存数据到数据库
+                save_to_db(data)
+        except KeyboardInterrupt:
+            tag.disconnect()
+    
+    if __name__ == "__main__":
+        if len(sys.argv) != 2:
+            print("Usage: python3 collect_data.py <MAC_ADDRESS>")
+            sys.exit(1)
+    
+        mac = sys.argv[1]
+        main(mac)
+    ```
+
+6. 运行 Python 脚本以收集数据：
+    ```sh
+    python3 collect_data.py 98:07:2D:31:49:83
+    ```
+
+7. 查看数据库中的数据：
+    退出虚拟环境：
+    ```sh
+    deactivate
+    ```
+    打开 SQLite 数据库并查看数据：
+    ```sh
+    sqlite3 sensordata.db
+    ```
+    设置显示表头和分隔符：
+    ```sql
+    .headers on
+    .mode column
+    ```
+    运行查询命令查看数据：
+    ```sql
+    SELECT * FROM SensorData;
+    ```
+    退出 SQLite 命令行工具：
+    ```sh
+    .exit
+    ```
 
 
